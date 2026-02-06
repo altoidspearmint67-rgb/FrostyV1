@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+  <title id="t">Settings</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" id="global" href="/assets/css/global.css?v=7" />
+  <link rel="stylesheet" href="/assets/css/container.css?v=3" />
+  <link rel="stylesheet" href="/assets/css/nav.css?v=2" />
+  <link rel="stylesheet" href="/assets/css/settings.css?v=06" />
+  <!-- Ads removed -->
+
+</head>
+
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" title="Home" class="nav-item">
+        <i data-lucide="home"></i>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="apps.html" class="nav-item">
+        <i data-lucide="grid-3x3"></i>
+        <span>Apps</span>
+      </a>
+      <a href="games.html" class="nav-item">
+        <i data-lucide="gamepad-2"></i>
+        <span>Games</span>
+      </a>
+      <a href="settings.html" class="nav-item">
+        <i data-lucide="settings"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="settings-container">
+      <div class="settings-card">
+        <h3>About:Blank</h3>
+        <p>
+          Cloak the site in an about:blank page and toggle about:blank on
+          startup (enabled by default)
+        </p>
+        <div id="ab-settings">
+          <div id="ab-settings-container">
+            <label class="switch">
+              <input type="checkbox" id="ab-settings-switch" class="slider-checkbox" onchange="toggleAB()" />
+              <span class="slider-round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Set Panic Key</h3>
+        <p>
+          Quick open another site with one press. Used for redirects when
+          about:blank is opened. For multiple key strokes separate them with a
+          comma. Ex. "A,B,C"
+        </p>
+        <input type="text" id="eventKeyInput" placeholder="Panic Keys (comma separated)" class="key-form" />
+        <input class="key-form" placeholder="Panic Link" type="text" id="linkInput" value />
+        <button class="key-button" value="Save" onclick="saveEventKey()">
+          Save
+        </button>
+      </div>
+
+      <div class="settings-card">
+        <h3>Tab Cloaker</h3>
+        <p>Change the title and icon used to cloak the tab.</p>
+        <select id="dropdown" onchange="handleDropdownChange(this)">
+          <option value="Classroom">Default</option>
+          <option value="Google">Google</option>
+          <option value="Drive">Google Drive</option>
+          <option value="Docs">Google Docs</option>
+          <option value="Slides">Google Slides</option>
+          <option value="Gmail">Gmail</option>
+          <option value="Classroom">Google Classroom</option>
+          <option value="Khan">Khan Academy</option>
+          <option value="Wikipedia">Wikipedia</option>
+          <option value="Dictionary">Dictionary.com</option>
+        </select>
+        <div id="buttonLayer">
+          <button class="key-button" value="Save" onclick="CustomIcon(); CustomName(); redirectToMainDomain();">
+            Save
+          </button>
+          <button class="key-button" value="Reset" onclick="ResetCustomCloak(); redirectToMainDomain();">
+            Reset Cloak
+          </button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Themes</h3>
+        <p>Pick from a variety of themes to customize your experience.</p>
+        <select id="theme-select" class="td" onchange="themeChange(this)">
+          <option value="blue">Ocean (Default)</option>
+          <option value="green">Forest</option>
+          <option value="red">Red Wine</option>
+          <option value="purple">Nebula</option>
+          <option value="amoled">Dark</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+  <script src="/assets/js/m1.js"></script>
+  <script src="/assets/js/s1.js"></script>
+  <script>
+    // Starry theme system
+    const THEMES = {
+      blue: {
+        "--bg-top": "#1e40af",
+        "--bg-mid": "#1e3a8a",
+        "--bg-deep": "#0f172a",
+        "--bg-bottom": "#020617",
+        "--accent-blue": "#60a5fa",
+        "--accent-cyan": "#22d3ee"
+      },
+      purple: {
+        "--bg-top": "#6d28d9",
+        "--bg-mid": "#4c1d95",
+        "--bg-deep": "#1e0b3c",
+        "--bg-bottom": "#020617",
+        "--accent-blue": "#a78bfa",
+        "--accent-cyan": "#c4b5fd"
+      },
+      green: {
+        "--bg-top": "#065f46",
+        "--bg-mid": "#064e3b",
+        "--bg-deep": "#022c22",
+        "--bg-bottom": "#020617",
+        "--accent-blue": "#34d399",
+        "--accent-cyan": "#6ee7b7"
+      },
+      red: {
+        "--bg-top": "#7f1d1d",
+        "--bg-mid": "#450a0a",
+        "--bg-deep": "#2a0606",
+        "--bg-bottom": "#140202",
+        "--accent-blue": "#f87171",
+        "--accent-cyan": "#fca5a5"
+      },
+      amoled: {
+        "--bg-top": "#000000",
+        "--bg-mid": "#000000",
+        "--bg-deep": "#000000",
+        "--bg-bottom": "#000000",
+        "--accent-blue": "#ffffff",
+        "--accent-cyan": "#888888"
+      }
+    };
+
+    function applyTheme(name) {
+      const theme = THEMES[name];
+      if (!theme) return;
+      Object.entries(theme).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    }
+
+    function themeChange(select) {
+      const name = select.value;
+      localStorage.setItem('starry-theme', name);
+      applyTheme(name);
+    }
+
+    (function loadTheme() {
+      let saved = localStorage.getItem('starry-theme');
+      if (!saved || !THEMES[saved]) {
+        saved = 'blue';
+        localStorage.setItem('starry-theme', saved);
+      }
+      const sel = document.getElementById('theme-select');
+      if (sel) sel.value = saved;
+      applyTheme(saved);
+    })();
+
+    lucide.createIcons();
+  </script>
+  <!-- DO NOT REMOVE-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WKJQ5QHQTJ");
+  </script>
+  <!-- DO NOT REMOVE-->
+</body>
+
+</html>

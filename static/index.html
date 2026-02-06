@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+  <title id="t">Frosty</title>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="/assets/css/global.css?v=7" />
+  <link rel="stylesheet" href="/assets/css/h.css?v=2" />
+  <link rel="stylesheet" href="/assets/css/nav.css?v=2" />
+
+  <!-- Ads removed -->
+</head>
+
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" title="Home" class="nav-item">
+        <i data-lucide="home"></i>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="apps.html" class="nav-item">
+        <i data-lucide="grid-3x3"></i>
+        <span>Apps</span>
+      </a>
+      <a href="games.html" class="nav-item">
+        <i data-lucide="gamepad-2"></i>
+        <span>Games</span>
+      </a>
+      <a href="settings.html" class="nav-item">
+        <i data-lucide="settings"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+  </nav>
+
+  <div title="Interstellar Logo" class="flex-center logo-wrapper header-center">
+    <h1 class="brand-text">Frosty</h1>
+  </div>
+
+  <div class="flex-center desc">
+    <p id="splash">
+      Browse the web freely
+    </p>
+  </div>
+
+  <form id="fv" class="flex-center">
+    <input id="sj-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+    <div class="input-container">
+      <i data-lucide="search" class="search-icon"></i>
+      <input id="input" type="text" placeholder="Search or enter a URL" />
+    </div>
+  </form>
+
+  <div class="desc">
+    <p id="sj-error"></p>
+    <pre id="sj-error-code"></pre>
+  </div>
+
+  <footer>
+    <div>
+      <span>Frosty &copy; 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    // Initializes the icons
+    lucide.createIcons();
+  </script>
+  <script src="assets/js/index-3.js"></script>
+  <script src="/assets/js/h1.js"></script>
+  <script src="./assets/mathematics/bundle.js?v=2025-04-15"></script>
+  <script src="./assets/mathematics/config.js?v=2025-04-15"></script>
+  <script src="/assets/js/m1.js"></script>
+  <script>
+    /* Load and apply saved theme */
+    (function loadTheme() {
+      const THEMES = {
+        blue: {
+          "--bg-top": "#1e40af",
+          "--bg-mid": "#1e3a8a",
+          "--bg-deep": "#0f172a",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#60a5fa",
+          "--accent-cyan": "#22d3ee"
+        },
+        purple: {
+          "--bg-top": "#6d28d9",
+          "--bg-mid": "#4c1d95",
+          "--bg-deep": "#1e0b3c",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#a78bfa",
+          "--accent-cyan": "#c4b5fd"
+        },
+        green: {
+          "--bg-top": "#065f46",
+          "--bg-mid": "#064e3b",
+          "--bg-deep": "#022c22",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#34d399",
+          "--accent-cyan": "#6ee7b7"
+        },
+        red: {
+          "--bg-top": "#7f1d1d",
+          "--bg-mid": "#450a0a",
+          "--bg-deep": "#2a0606",
+          "--bg-bottom": "#140202",
+          "--accent-blue": "#f87171",
+          "--accent-cyan": "#fca5a5"
+        },
+        amoled: {
+          "--bg-top": "#000000",
+          "--bg-mid": "#000000",
+          "--bg-deep": "#000000",
+          "--bg-bottom": "#000000",
+          "--accent-blue": "#ffffff",
+          "--accent-cyan": "#888888"
+        }
+      };
+      let saved = localStorage.getItem("starry-theme") || "blue";
+      const theme = THEMES[saved] || THEMES.blue;
+      Object.entries(theme).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    })();
+  </script>
+  <!-- DO NOT REMOVE-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-WKJQ5QHQTJ")
+  </script>
+  <!-- DO NOT REMOVE-->
+</body>
+
+</html>

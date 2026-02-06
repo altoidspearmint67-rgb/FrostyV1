@@ -1,0 +1,255 @@
+/* --- Navigation Bar --- */
+.top-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1400px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+    
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40px) brightness(1.1);
+    -webkit-backdrop-filter: blur(40px) brightness(1.1);
+    border-radius: 26px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+.nav-item i, .nav-item svg {
+    width: 24px; 
+    height: 24px;
+    color: #ffffff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+}
+
+/* SPECIFICALLY MAKE THE HOUSE ICON BIGGER */
+.nav-item [data-lucide="home"],
+.nav-item svg[viewBox="0 0 24 24"] {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.nav-item:hover i, .nav-item:hover svg {
+    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.5));
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+    .top-nav {
+        height: 80px;
+        padding: 0 30px;
+    }
+    .nav-left, .nav-right {
+        gap: 25px;
+    }
+    .nav-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        height: 70px;
+        top: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+        width: 95%;
+    }
+    
+    .nav-left, .nav-right {
+        gap: 15px;
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .nav-item i, .nav-item svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* Ensure the home icon stays relatively larger even on mobile */
+    .nav-item [data-lucide="home"],
+    .nav-item svg[viewBox="0 0 24 24"] {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav {
+        width: 95%;
+        padding: 0 15px;
+        height: 65px;
+    }
+    
+    .nav-left, .nav-right {
+        gap: 12px;
+    }
+
+    .nav-item i, .nav-item svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-item [data-lucide="home"] {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.f-nav .icon {
+   position: absolute;
+   float: left;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-family: "Inter", sans-serif;
+   cursor: pointer;
+   color: var(--text-primary);
+   font-weight: 600;
+   margin-left: 5px;
+   font-style: normal;
+   text-decoration: none;
+   transition: all 0.2s ease;
+   height: 5vh;
+   top: 18%;
+}
+
+.f-nav-right {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   text-transform: uppercase;
+   font-size: 18px;
+   color: var(--text-primary);
+   font-weight: 600;
+   right: 2%;
+}
+
+.f-nav-right .navbar-link {
+   margin-left: 10px;
+   text-transform: uppercase;
+   cursor: pointer;
+   color: var(--text-primary);
+   font-weight: 800;
+   right: 2%;
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+   text-decoration: none;
+   transition: all 0.2s ease;
+   transform: translateX(0%);
+}
+
+@media (orientation: portrait) {
+   .f-nav-right .navbar-link {
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-size: 2.5vw;
+      cursor: pointer;
+      color: var(--text-primary);
+      font-weight: 800;
+      right: 2%;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      transform: translateX(0%);
+   }
+   .f-nav-right .navbar-link:hover {
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 800;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-size: 3vw;
+      transform: translateX(-20%);
+   }
+}
+
+.f-nav-right .navbar-link:hover {
+   text-transform: uppercase;
+   cursor: pointer;
+   font-weight: 800;
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+   font-size: 3vh;
+   transform: translateX(-20%);
+}
+
+.navbar-icon {
+   margin-right: 5px;
+   transition: all 0.2s ease;
+}
+
+.navbar-link {
+   margin-right: 5px;
+}
+
+.navbar-link:hover > .settings-icon {
+   animation: spin 0.5s;
+   animation-timing-function: cubic-bezier(0, 1.04, 0.91, 0.99);
+}
+
+@media (max-width: 768px) {
+   .f-nav-right .navbar-link an {
+      display: none;
+   }
+   .f-nav-right .fa-solid {
+      display: inline;
+   }
+   .f-nav-right .navbar-link {
+      font-size: 4.5vw;
+   }
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@media (orientation: portrait) {
+   img {
+      height: 40px;
+   }
+}

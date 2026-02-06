@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+  <title id="t">Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/assets/css/global.css?v=7" />
+  <link rel="stylesheet" href="/assets/css/container.css?v=3" />
+  <link rel="stylesheet" href="/assets/css/nav.css?v=2" />
+  <script src="/assets/js/index-3.js"></script>
+  <!-- Ads removed -->
+</head>
+
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" title="Home" class="nav-item">
+        <i data-lucide="home"></i>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="apps.html" class="nav-item">
+        <i data-lucide="grid-3x3"></i>
+        <span>Apps</span>
+      </a>
+      <a href="games.html" class="nav-item">
+        <i data-lucide="gamepad-2"></i>
+        <span>Games</span>
+      </a>
+      <a href="settings.html" class="nav-item">
+        <i data-lucide="settings"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="input-c">
+    <input type="text" id="search" onkeyup="bar()" placeholder="Search Games" />
+    <select id="category" name="category" onchange="category()">
+      <option value="all">All</option>
+      <option value="android">Android Emulator</option>
+      <option value="2P">Multiplayer</option>
+      <option value="sports">Sports</option>
+      <option value="flash">Flash</option>
+      <option value="emu">Emulator</option>
+      <option value="local">Local</option>
+    </select>
+  </div>
+  <div class="pinned"></div>
+  <div class="apps"></div>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="/assets/js/c1.js?v=001"></script>
+  <script src="./assets/mathematics/bundle.js?v=2025-04-15"></script>
+  <script src="./assets/mathematics/config.js?v=2025-04-15"></script>
+  <script src="/assets/js/m1.js"></script>
+  <script>
+    /* Load and apply saved theme */
+    (function loadTheme() {
+      const THEMES = {
+        blue: {
+          "--bg-top": "#1e40af",
+          "--bg-mid": "#1e3a8a",
+          "--bg-deep": "#0f172a",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#60a5fa",
+          "--accent-cyan": "#22d3ee"
+        },
+        purple: {
+          "--bg-top": "#6d28d9",
+          "--bg-mid": "#4c1d95",
+          "--bg-deep": "#1e0b3c",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#a78bfa",
+          "--accent-cyan": "#c4b5fd"
+        },
+        green: {
+          "--bg-top": "#065f46",
+          "--bg-mid": "#064e3b",
+          "--bg-deep": "#022c22",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#34d399",
+          "--accent-cyan": "#6ee7b7"
+        },
+        red: {
+          "--bg-top": "#7f1d1d",
+          "--bg-mid": "#450a0a",
+          "--bg-deep": "#2a0606",
+          "--bg-bottom": "#140202",
+          "--accent-blue": "#f87171",
+          "--accent-cyan": "#fca5a5"
+        },
+        amoled: {
+          "--bg-top": "#000000",
+          "--bg-mid": "#000000",
+          "--bg-deep": "#000000",
+          "--bg-bottom": "#000000",
+          "--accent-blue": "#ffffff",
+          "--accent-cyan": "#888888"
+        }
+      };
+      let saved = localStorage.getItem("starry-theme") || "blue";
+      const theme = THEMES[saved] || THEMES.blue;
+      Object.entries(theme).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+  <!-- DO NOT REMOVE-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WKJQ5QHQTJ");
+  </script>
+  <!-- DO NOT REMOVE-->
+</body>
+
+</html>
+
+gtag("config", "G-WKJQ5QHQTJ");
+</script>
+<!-- DO NOT REMOVE-->
+</body>
+
+</html>

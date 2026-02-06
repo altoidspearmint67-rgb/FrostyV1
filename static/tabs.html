@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+  <title id="t">Tabs</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/assets/css/global.css?v=7" />
+  <link rel="stylesheet" href="/assets/css/t.css?v=03" />
+  <script>
+    window.addEventListener("resize", navigator.keyboard.lock(["Escape"]));
+  </script>
+</head>
+
+<body id="no">
+  <nav class="nav" id="right-side-nav">
+    <ul id="tab-list"></ul>
+    <button title="add-tab" id="add-tab" class="add-tab-btn">
+      <i data-lucide="plus"></i>
+    </button>
+  </nav>
+  <div class="nav-bar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <button title="Home Page" id="home-page" class="nav-button" onclick="Home()">
+          <i data-lucide="home"></i>
+        </button>
+        <button title="Back Arrow" class="nav-button" onclick="goBack()">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <button title="Forward Arrow" class="nav-button" onclick="goForward()">
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button title="Reload" onclick="reload()" class="nav-button">
+          <i data-lucide="rotate-cw"></i>
+        </button>
+        <form id="fv" class="navpost" method="POST">
+          <input id="input" class="bar" placeholder="Search or enter a new URL" type="text" />
+        </form>
+      </div>
+      <div class="nav-right">
+        <button title="Fullscreen" id="fullscreen-button" class="nav-button nav-btn-right" onclick="FS()">
+          <i data-lucide="maximize"></i>
+        </button>
+        <button title="Window Popout" id="popout-button" class="nav-button nav-btn-right" onclick="popout()">
+          <i data-lucide="external-link"></i>
+        </button>
+        <button title="Inspect" class="nav-button nav-btn-right" onclick="eToggle()">
+          <i data-lucide="code"></i>
+        </button>
+        <button title="Tabs" id="tabs-button" class="nav-button nav-btn-right">
+          <i data-lucide="search-minus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="frame-container" id="frame-container"></div>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="assets/js/t3.js"></script>
+  <script src="./assets/mathematics/bundle.js?v=2025-04-15"></script>
+  <script src="./assets/mathematics/config.js?v=2025-04-15"></script>
+  <script src="/assets/js/m1.js"></script>
+  <script>
+    /* Load and apply saved theme */
+    (function loadTheme() {
+      const THEMES = {
+        blue: {
+          "--bg-top": "#1e40af",
+          "--bg-mid": "#1e3a8a",
+          "--bg-deep": "#0f172a",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#60a5fa",
+          "--accent-cyan": "#22d3ee"
+        },
+        purple: {
+          "--bg-top": "#6d28d9",
+          "--bg-mid": "#4c1d95",
+          "--bg-deep": "#1e0b3c",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#a78bfa",
+          "--accent-cyan": "#c4b5fd"
+        },
+        green: {
+          "--bg-top": "#065f46",
+          "--bg-mid": "#064e3b",
+          "--bg-deep": "#022c22",
+          "--bg-bottom": "#020617",
+          "--accent-blue": "#34d399",
+          "--accent-cyan": "#6ee7b7"
+        },
+        red: {
+          "--bg-top": "#7f1d1d",
+          "--bg-mid": "#450a0a",
+          "--bg-deep": "#2a0606",
+          "--bg-bottom": "#140202",
+          "--accent-blue": "#f87171",
+          "--accent-cyan": "#fca5a5"
+        },
+        amoled: {
+          "--bg-top": "#000000",
+          "--bg-mid": "#000000",
+          "--bg-deep": "#000000",
+          "--bg-bottom": "#000000",
+          "--accent-blue": "#ffffff",
+          "--accent-cyan": "#888888"
+        }
+      };
+      let saved = localStorage.getItem("starry-theme") || "blue";
+      const theme = THEMES[saved] || THEMES.blue;
+      Object.entries(theme).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    })();
+  </script>
+  <!-- DO NOT REMOVE-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WKJQ5QHQTJ");
+  </script>
+  <!-- DO NOT REMOVE-->
+</body>
+
+</html>

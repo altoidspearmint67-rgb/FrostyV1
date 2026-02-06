@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
+
+/* --- High Visibility Star Layers --- */
+#stars, #stars2, #stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+#stars {
+    width: 2px;
+    height: 2px;
+    box-shadow: 443px 1827px #FFF, 172px 143px var(--accent-cyan), 1283px 1324px #FFF, 1928px 432px var(--accent-cyan), 843px 921px #FFF, 321px 120px #FFF, 1542px 342px var(--accent-cyan), 600px 1800px #FFF, 200px 1500px #FFF, 1100px 100px var(--accent-cyan), 400px 800px #FFF, 1600px 1200px #FFF, 800px 450px #FFF, 1300px 1600px var(--accent-cyan), 50px 1100px #FFF, 1800px 1900px #FFF, 250px 250px var(--accent-cyan), 950px 1450px #FFF;
+    animation: animStar 30s linear infinite;
+}
+
+#stars2 {
+    width: 3px;
+    height: 3px;
+    box-shadow: 1542px 123px #FFF, 243px 1543px var(--accent-blue), 843px 231px #FFF, 1200px 800px var(--accent-blue), 500px 1100px #FFF, 1800px 400px var(--accent-blue), 100px 1200px #FFF, 1400px 1800px var(--accent-blue), 600px 300px #FFF;
+    filter: drop-shadow(0 0 4px #FFF) drop-shadow(0 0 6px var(--accent-blue));
+    animation: animStar 60s linear infinite;
+}
+
+#stars3 {
+    width: 4px;
+    height: 4px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 800px 400px 3px #FFF, 200px 1200px 3px #FFF, 1500px 1800px 3px #FFF, 1100px 100px 3px #FFF;
+    filter: drop-shadow(0 0 8px #FFF) drop-shadow(0 0 12px var(--accent-blue));
+    animation: animStar 90s linear infinite;
+}
+
+@keyframes animStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+/* ===== CARD STYLING ===== */
+
+.column {
+   width: 190px;
+   padding: 20px 20px 18px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 26px;
+   background: transparent;
+   border: 1px solid transparent;
+   cursor: pointer;
+   text-decoration: none;
+   color: var(--text-main);
+   transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.column:hover {
+   transform: scale(1.08);
+   background: rgba(255, 255, 255, 0.12);
+   border-color: rgba(255, 255, 255, 0.35);
+   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.column img {
+   width: 150px;
+   height: 150px;
+   border-radius: 22px;
+   overflow: hidden;
+   object-fit: cover;
+   transition: all 0.25s ease;
+   pointer-events: none;
+   user-select: none;
+}
+
+.column p {
+   width: 150px;
+   font-weight: 700;
+   font-size: 1.05rem;
+   line-height: 1.2;
+   text-align: center;
+   color: var(--text-main);
+   text-shadow: none;
+   padding: 0;
+   margin-top: 16px;
+   margin-bottom: 0;
+}
+
+/* Hide pin button */
+.column button {
+   display: none !important;
+}
+
+.column:hover .label {
+   transform: none;
+}
+
+/* Container Layout */
+.apps {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 36px;
+   flex-direction: row;
+   padding: 0 6vw 8vw;
+}
+
+.pinned {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 36px;
+   padding: 0 6vw;
+}
+
+/* ===== INPUT STYLING ===== */
+
+input[type="text"] {
+   padding: 16px 25px;
+   width: 400px;
+   border-radius: 16px;
+   background: rgba(255, 255, 255, 0.08);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+   color: var(--text-main);
+   text-align: left;
+   font-size: 1rem;
+   font-family: inherit;
+   outline: none;
+   transition: all 0.3s ease;
+   backdrop-filter: blur(40px) brightness(1.1);
+   -webkit-backdrop-filter: blur(40px) brightness(1.1);
+}
+
+input[type="text"]::placeholder {
+   color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="text"]:focus {
+   background: rgba(255, 255, 255, 0.12);
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+   transform: scale(1.02);
+}
+
+select {
+   padding: 16px 25px;
+   border-radius: 16px;
+   background: rgba(255, 255, 255, 0.08);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+   color: var(--text-main);
+   font-size: 1rem;
+   font-family: inherit;
+   outline: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   backdrop-filter: blur(40px) brightness(1.1);
+   -webkit-backdrop-filter: blur(40px) brightness(1.1);
+}
+
+select:hover {
+   background: rgba(255, 255, 255, 0.1);
+   border-color: rgba(255, 255, 255, 0.4);
+}
+
+select:focus {
+   background: rgba(255, 255, 255, 0.12);
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+select option {
+   background: var(--bg-mid);
+   color: var(--text-main);
+}
+
+/* ===== SEARCH CONTAINER ===== */
+.input-c {
+   position: relative;
+   margin-top: 150px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1.5em;
+   padding: 0 20px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+   .column {
+      width: 160px;
+      padding: 16px;
+      border-radius: 22px;
+   }
+
+   .column img {
+      width: 120px;
+      height: 120px;
+      border-radius: 18px;
+   }
+
+   .column p {
+      width: 120px;
+      font-size: 0.95rem;
+      margin-top: 12px;
+   }
+
+   .apps, .pinned {
+      gap: 24px;
+      padding-left: 3vw;
+      padding-right: 3vw;
+   }
+
+   input[type="text"] {
+      width: 100%;
+      max-width: 300px;
+   }
+
+   .input-c {
+      margin-top: 130px;
+      gap: 1em;
+   }
+}
+
+@media (max-width: 480px) {
+   .column {
+      width: 140px;
+      padding: 14px;
+   }
+
+   .column img {
+      width: 100px;
+      height: 100px;
+   }
+
+   .column p {
+      width: 100px;
+      font-size: 0.9rem;
+      margin-top: 10px;
+   }
+
+   .apps, .pinned {
+      gap: 18px;
+      padding-left: 2vw;
+      padding-right: 2vw;
+   }
+
+   input[type="text"] {
+      width: 90%;
+      max-width: none;
+      font-size: 0.95rem;
+      padding: 14px 20px;
+   }
+
+   select {
+      width: 90%;
+      max-width: none;
+      font-size: 0.95rem;
+      padding: 14px 20px;
+   }
+
+   .input-c {
+      margin-top: 110px;
+      gap: 0.8em;
+      width: 100%;
+   }
+}
