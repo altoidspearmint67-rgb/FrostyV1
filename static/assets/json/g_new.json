@@ -1,7 +1,7 @@
 [
   {
     "name": "1 v 1 Soccer",
-    "link": "https://html5.gamedistribution.com/8ea3227da34148c8b61633b5b2121196/?gd_sdk_referrer_url=https%3A%2F%2Fwww.1001games.com%2Fsport%2F1-on-1-soccer",
+    "link": "https://55gms.com/misc/flash/index.html?swf=1on1soccer.swf",
     "image": "/assets/media/icons/1v1soccer.png",
     "categories": ["all", "sports"]
   },
@@ -37,8 +37,27 @@
     "blank": "true"
   },
   {
+    "name": "Ant Art Tycoon",
+    "link": "https://antarttycoon.github.io/spalsh.html",
+    "image": "/assets/media/icons/AntArtTycoon.png",
+    "categories": ["all"],
+    "blank": "true"
+  },
+  {
+    "name": "Basketball Bros",
+    "link": "https://www.basketbros.io/",
+    "image": "/assets/media/icons/basket-bros.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Basketball Legends",
+    "link": "https://www.basketballlegends.fun/gamedata/basketball-legends-2020",
+    "image": "/assets/media/icons/basketball-legends.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "Basketball Stars",
-    "link": "https://basketball-stars.io/game/basketball-stars/",
+    "link": "https://55gms.com/misc/basketball-stars/",
     "image": "/assets/media/icons/basketball-stars.webp",
     "categories": ["all", "sports"]
   },
@@ -49,14 +68,20 @@
     "categories": ["all"]
   },
   {
+    "name": "Big Tower Tiny Square",
+    "link": "https://www.coolmathgames.com/0-big-tower-tiny-square/play",
+    "image": "/assets/media/icons/bigtowertinysquare.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "Bloxorz",
-    "link": "https://55gms.com/misc/play/bloxrz.html",
+    "link": "https://55gms.com/misc/bloxrz/",
     "image": "/assets/media/icons/Bloxorz.png",
     "categories": ["all"]
   },
   {
     "name": "Boxing Random",
-    "link": "https://55gms.com/misc/play/boxing-random.html",
+    "link": "https://55gms.com/misc/boxing-random/index.html",
     "image": "/assets/media/icons/BoxingRandom.png",
     "categories": ["all", "sports"]
   },
@@ -133,6 +158,12 @@
     "categories": ["all"]
   },
   {
+    "name": "Drift Boss",
+    "link": "https://watchdocumentaries.com/wp-content/uploads/games/drift-boss/",
+    "image": "/assets/media/icons/db.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "Drift Hunters",
     "link": "https://topvaz3.github.io/lesson302/lesson-8/",
     "image": "/assets/media/icons/drift-hunters.webp",
@@ -151,6 +182,31 @@
     "categories": ["all"]
   },
   {
+    "name": "Duck Life 1",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life 2",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-2-world-champion/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life 3",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-3-evolution/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life 4",
+    "link": "/e/ducklife4/index.html",
+    "image": "/assets/media/icons/dl4.webp",
+    "categories": ["all", "local"],
+    "load": true
+  },
+  {
     "name": "Eaglercraft 1.8",
     "link": "https://eaglercraft1-8.github.io/",
     "image": "/assets/media/icons/Eaglercraft15.png",
@@ -163,10 +219,22 @@
     "categories": ["all"]
   },
   {
+    "name": "Fancy Pants Adventure",
+    "link": "https://games.crazygames.com/en_US/fancy-pants-adventure-world/index.html?v=1.273",
+    "image": "/assets/media/icons/fancypantsadventures.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "Fireboy & Watergirl",
     "link": "https://55gms.com/misc/fbwg/index.html",
     "image": "/assets/media/icons/fireboyandwatergirlforesttemple.webp",
     "categories": ["all", "2P"]
+  },
+  {
+    "name": "FNAF Web",
+    "link": "https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/",
+    "image": "/assets/media/icons/FNAFWeb.webp",
+    "categories": ["all"]
   },
   {
     "name": "FNF vs Snorlax",
@@ -175,9 +243,21 @@
     "categories": ["all"]
   },
   {
+    "name": "Google Baseball",
+    "link": "https://www.google.com/logos/2019/july4th19/r6/july4th19.html",
+    "image": "/assets/media/icons/googlebaseball.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "Gun Mayhem 2",
     "link": "https://55gms.com/misc/flash/index.html?swf=gmayhem2.swf",
     "image": "/assets/media/icons/GunMayhem2.png",
+    "categories": ["all"]
+  },
+  {
+    "name": "Gunspin",
+    "link": "https://html5.gamedistribution.com/rvvASMiM/917cce8c44c44638a8cdc2a1794b65c8/index.html",
+    "image": "/assets/media/icons/gunspin.webp",
     "categories": ["all"]
   },
   {
@@ -205,6 +285,12 @@
     "categories": ["all"]
   },
   {
+    "name": "Jetpack Joyride",
+    "link": "https://jetpack-joyride-pcp.game-files.crazygames.com/jetpack-joyride-pcp/15/index.html",
+    "image": "/assets/media/icons/jetpackjoyride.webp",
+    "categories": ["all", "local"]
+  },
+  {
     "name": "Learn to Fly 2",
     "link": "https://55gms.com/misc/flash/index.html?swf=learn-to-fly-2.swf",
     "image": "/assets/media/icons/learntofly3.webp",
@@ -220,6 +306,12 @@
     "name": "Murder",
     "link": "https://topvaz3.github.io/lesson302/lesson-83/",
     "image": "/assets/media/icons/Murder.png",
+    "categories": ["all"]
+  },
+  {
+    "name": "N-Gon",
+    "link": "https://55gms.com/misc/n-gon/index.html",
+    "image": "/assets/media/icons/NGON.webp",
     "categories": ["all"]
   },
   {
