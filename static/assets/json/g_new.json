@@ -231,6 +231,12 @@
     "categories": ["all", "2P"]
   },
   {
+    "name": "Five Nights at Epstein's",
+    "link": "https://truffled.lol/gamefile/fnae.html",
+    "image": "/assets/media/icons/FNAE.png",
+    "categories": ["all", "2P"]
+  },
+  {
     "name": "FNAF Web",
     "link": "https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/",
     "image": "/assets/media/icons/FNAFWeb.webp",
