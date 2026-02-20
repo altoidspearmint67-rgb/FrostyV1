@@ -61,6 +61,8 @@ function handleClick(app) {
     Custom(app);
   } else if (app.dy) {
     dy(Selected);
+  } else if (app.frame) {
+    frameUrl(Selected);
   } else {
     go(Selected);
     if (t) {
@@ -68,6 +70,15 @@ function handleClick(app) {
     }
   }
   return false;
+}
+
+function frameUrl(value) {
+  sessionStorage.setItem("DirectUrl", value);
+  try {
+    window.location.href = "/d";
+  } catch {
+    location.href = "/d";
+  }
 }
 
 function getSelected(links) {

@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", event => {
     const newTab = document.createElement("li");
     const tabTitle = document.createElement("span");
     const newIframe = document.createElement("iframe");
-    newIframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-orientation-lock allow-presentation allow-storage-access-by-user-activation";
+    newIframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-orientation-lock allow-presentation allow-storage-access-by-user-activation allow-popups";
     // When Top Navigation is not allowed links with the "top" value will be entirely blocked, if we allow Top Navigation it will overwrite the tab, which is obviously not wanted.
     tabTitle.textContent = `New Tab ${tabCounter}`;
     tabTitle.className = "t";
@@ -78,9 +78,16 @@ document.addEventListener("DOMContentLoaded", event => {
       } else {
         tabTitle.textContent = title;
       }
+      const isFrameMode = newIframe.dataset.frameMode === "true";
       newIframe.contentWindow.open = url => {
-        sessionStorage.setItem("URL", `/a/${__uv$config.encodeUrl(url)}`);
-        createNewTab();
+        if (isFrameMode) {
+          // For frame mode, load URL directly in the same iframe
+          newIframe.src = url;
+        } else {
+          // For proxied mode, create new tab with proxied URL
+          sessionStorage.setItem("URL", `/a/${__uv$config.encodeUrl(url)}`);
+          createNewTab();
+        }
         return null;
       };
       if (newIframe.contentDocument.documentElement.outerHTML.trim().length > 0) {
@@ -90,9 +97,14 @@ document.addEventListener("DOMContentLoaded", event => {
     });
     const goUrl = sessionStorage.getItem("GoUrl");
     const url = sessionStorage.getItem("URL");
+    const directUrl = sessionStorage.getItem("DirectUrl");
 
     if (tabCounter === 0 || tabCounter === 1) {
-      if (goUrl !== null) {
+      if (directUrl !== null) {
+        newIframe.src = directUrl;
+        newIframe.dataset.frameMode = "true";
+        sessionStorage.removeItem("DirectUrl");
+      } else if (goUrl !== null) {
         if (goUrl.includes("/e/")) {
           newIframe.src = window.location.origin + goUrl;
         } else {
@@ -102,7 +114,11 @@ document.addEventListener("DOMContentLoaded", event => {
         newIframe.src = "/";
       }
     } else if (tabCounter > 1) {
-      if (url !== null) {
+      if (directUrl !== null) {
+        newIframe.src = directUrl;
+        newIframe.dataset.frameMode = "true";
+        sessionStorage.removeItem("DirectUrl");
+      } else if (url !== null) {
         newIframe.src = window.location.origin + url;
         sessionStorage.removeItem("URL");
       } else if (goUrl !== null) {

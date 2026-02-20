@@ -25,9 +25,10 @@
   },
   {
     "name": "Adventure Capitalist",
-    "link": "https://kdata1.com/2021/03/adcapitalist/?d",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/adventure-capitalist/index.html",
     "image": "/assets/media/icons/adventure-capitalist.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Amazon Luna",
@@ -45,9 +46,10 @@
   },
   {
     "name": "Basketball Bros",
-    "link": "https://www.basketbros.io/",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/basketbros-io/",
     "image": "/assets/media/icons/basket-bros.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Basketball Legends",
@@ -153,15 +155,17 @@
   },
   {
     "name": "Doge Miner",
-    "link": "https://55gms.com/misc/dogeminer/index.html",
+    "link": "https://dogeminer.altoidspearmint67.workers.dev/",
     "image": "/assets/media/icons/doge-miner-1.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Drift Boss",
-    "link": "https://watchdocumentaries.com/wp-content/uploads/games/drift-boss/",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/drift-boss/",
     "image": "/assets/media/icons/db.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Drift Hunters",
@@ -208,9 +212,10 @@
   },
   {
     "name": "Eaglercraft 1.8",
-    "link": "https://eaglercraft1-8.github.io/",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/eaglercraftx/index.html",
     "image": "/assets/media/icons/Eaglercraft15.png",
-    "categories": ["all", "emu"]
+    "categories": ["all", "emu"],
+    "frame": true
   },
   {
     "name": "Escape From School",
@@ -238,9 +243,10 @@
   },
   {
     "name": "FNAF Web",
-    "link": "https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/misc/frame.html?link=fnaf&title=FNAF",
     "image": "/assets/media/icons/FNAFWeb.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "FNF vs Snorlax",
@@ -262,9 +268,10 @@
   },
   {
     "name": "Gunspin",
-    "link": "https://html5.gamedistribution.com/rvvASMiM/917cce8c44c44638a8cdc2a1794b65c8/index.html",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/gunspin/",
     "image": "/assets/media/icons/gunspin.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Hole.io",
@@ -304,9 +311,10 @@
   },
   {
     "name": "Moto X3M",
-    "link": "https://55gms.com/misc/motox3m/index.html",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/motox3m/index.html",
     "image": "/assets/media/icons/mx3m.webp",
-    "categories": ["all"]
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Murder",
@@ -364,9 +372,10 @@
   },
   {
     "name": "Retro Bowl",
-    "link": "https://55gms.com/misc/misc/frame.html?link=rb&title=Retro%20Bowl",
+    "link": "https://games.altoidspearmint67.workers.dev/misc/misc/frame.html?link=rb&title=Retro%20Bowl",
     "image": "/assets/media/icons/retro.webp",
-    "categories": ["all", "sports"]
+    "categories": ["all", "sports"],
+    "frame": true
   },
   {
     "name": "Riddle School 1",
@@ -376,9 +385,10 @@
   },
   {
     "name": "Roblox",
-    "link": "https://72.ip.nowgg.fun/apps/a/19900/b.html",
+    "link": "https://dogeminer.altoidspearmint67.workers.dev/",
     "image": "/assets/media/icons/roblox.webp",
-    "categories": ["all", "android"]
+    "categories": ["all", "android"],
+    "frame": true
   },
   {
     "name": "Rocket Bot Royale",
@@ -409,6 +419,13 @@
     "link": "https://baldis-basics-online.github.io/g5/class-450/",
     "image": "/assets/media/icons/slope.webp",
     "categories": ["all"]
+  },
+  {
+    "name": "Soflo Wheelie Life",
+    "link": "https://soflowheelielife.altoidspearmint67.workers.dev/mobile/games/soflo-wheelie-life/game.html",
+    "image": "/assets/media/icons/SofloWheelie.png",
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Sonic 1991",
