@@ -280,6 +280,13 @@
     "categories": ["all"]
   },
   {
+    "name": "Horror Triple T",
+    "link": "https://horrortriplet.altoidspearmint67.workers.dev/games/tungtunghorror",
+    "image": "/assets/media/icons/HorrorTripleT.png",
+    "categories": ["all"],
+    "frame": true
+  },
+  {
     "name": "Idle Startup Tycoon",
     "link": "https://ubg76.gitlab.io/idle-startup-company/",
     "image": "/assets/media/icons/idlestartup.webp",
@@ -327,6 +334,13 @@
     "link": "https://55gms.com/misc/n-gon/index.html",
     "image": "/assets/media/icons/NGON.webp",
     "categories": ["all"]
+  },
+  {
+    "name": "Not My Neighbor (Web Port)",
+    "link": "https://horrortriplet.altoidspearmint67.workers.dev/games/notmyneighbor.html",
+    "image": "/assets/media/icons/NotMyNeighbor.png",
+    "categories": ["all"],
+    "frame": true
   },
   {
     "name": "Nut Simulator",
