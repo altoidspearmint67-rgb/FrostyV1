@@ -54,9 +54,7 @@
   </div>
 
   <div class="flex-center desc">
-    <p id="splash">
-      Browse the web with no internet restrictions
-    </p>
+    <p id="splash" style="cursor: pointer;"></p>
   </div>
 
   <form id="fv" class="flex-center">
@@ -87,6 +85,31 @@
   <script src="./assets/mathematics/bundle.js?v=2025-04-15"></script>
   <script src="./assets/mathematics/config.js?v=2025-04-15"></script>
   <script src="/assets/js/m1.js"></script>
+  <script>
+    const splashLines = [
+      "Browse the web with no internet restrictions",
+      "Fuck Zscaler, GoGuardian, Lanschool, and Gaggle",
+      "Carum Carum Carum",
+      "Explore freely, no restrictions required",
+      "SILLY SAM!!!! GET OFF THE GAME!!!",
+      "Frosty >>>> Any other proxy website",
+      "!!!Mr White best teach oat!!!",
+      "Manny get off the game and do your work!!!",
+      "0.02 gpa activities",
+      "Unblock any website :}",
+      "Website made by Andrew Jackson (aka the principal)"
+    ];
+
+    let currentIndex = Math.floor(Math.random() * splashLines.length);
+
+    const splash = document.getElementById("splash");
+    splash.textContent = splashLines[currentIndex];
+
+    splash.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % splashLines.length;
+      splash.textContent = splashLines[currentIndex];
+    });
+  </script>
   <script>
     /* Load and apply saved theme */
     (function loadTheme() {
